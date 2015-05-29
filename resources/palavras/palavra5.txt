@@ -1,0 +1,146 @@
+30 Jan 23:58:00  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:57:51
+30 Jan 23:58:00  INFO - (DynamicWindowController.java:207) - 30/01/13 23:57:51;;END;;SYSTEM;NO_SYNC
+30 Jan 23:58:00  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 16ms <<---------------
+30 Jan 23:58:03  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:56:55
+30 Jan 23:58:03  INFO - (DynamicWindowController.java:207) - 30/01/13 23:56:55;14V1-CMD;FECH;;PDS;ROUTINE_SYNC
+30 Jan 23:58:03  INFO - (DynamicWindowController.java:207) - 30/01/13 23:56:55;15L4-CMD;FECH;;PDS;ROUTINE_SYNC
+30 Jan 23:58:03  INFO - (DynamicWindowController.java:207) - 30/01/13 23:56:55;15L5-CMD;FECH;;PDS;ROUTINE_SYNC
+30 Jan 23:58:03  INFO - (DynamicWindowController.java:207) - 30/01/13 23:56:55;15L6-CMD;FECH;;PDS;ROUTINE_SYNC
+30 Jan 23:58:03  INFO - (DynamicWindowController.java:207) - 30/01/13 23:56:55;34V1-6-CMD;ABER;;PDS;ROUTINE_SYNC
+30 Jan 23:58:03  INFO - (DynamicWindowController.java:207) - 30/01/13 23:56:55;32L1-4-CTG;ABER;;PDS;ROUTINE_SYNC
+30 Jan 23:58:03  INFO - (DynamicWindowController.java:207) - 30/01/13 23:56:55;34J3-4-USD;ABER;;PDS;ROUTINE_SYNC
+30 Jan 23:58:03  INFO - (DynamicWindowController.java:207) - 30/01/13 23:57:54;;END;;SYSTEM;ROUTINE_SYNC
+30 Jan 23:58:03  INFO - (LineDetector.java:380) - [<Connectivity-04V1-CMD, -[34V1-6-CMD/ABER], +{}, connected (decided by analogical measurements, myTerminal:mvar:0.4, mw:15.5, kv:236.8, otherTerminal:mvar:NaN, mw:NaN, kv:NaN), connecting path: [04V1-CMD, 34V1-6-CMD, 34V1-2-CMD, 34B2-2-CMD, 34D1-2-CMD, 14D1-CMD, 34D1-1-CMD, 34B1-1-CMD, 04B1-1-CMD] <true>>, <Connectivity-04V1-CMD, -[34V1-6-CMD/ABER], +{}, connected (decided by analogical measurements, myTerminal:mvar:0.4, mw:15.5, kv:236.8, otherTerminal:mvar:NaN, mw:NaN, kv:NaN), connecting path: [04V1-CMD, 34V1-6-CMD, 34V1-2-CMD, 34B2-2-CMD, 34D1-2-CMD, 14D1-CMD, 34D1-1-CMD, 34B1-1-CMD, 04B1-1-CMD] <true>>]
+30 Jan 23:58:03  INFO - (LineDetector.java:380) - [<Connectivity-02L1-CTG, -[], +{12D1-CTG=30/01/13 23:56:55 - FECH, 32BA-1-CTG=30/01/13 23:56:55 - FECH, 32L1-6-CTG=30/01/13 23:56:55 - FECH}, connected (decided by analogical measurements, myTerminal:mvar:10.6, mw:21.1, kv:NaN, otherTerminal:), connecting path: [02L1-CTG, 32L1-6-CTG, 32BA-1-CTG, 32D1-2-CTG, 12D1-CTG, 32D1-1-CTG, 02BP-2-CTG] <false>>, <Connectivity-02L1-CTG, -[], +{12D2-CTG=30/01/13 23:56:55 - FECH, 32L1-6-CTG=30/01/13 23:56:55 - FECH}, connected (decided by analogical measurements, myTerminal:mvar:10.6, mw:21.1, kv:NaN, otherTerminal:), connecting path: [02L1-CTG, 32L1-6-CTG, 32D2-2-CTG, 12D2-CTG, 32D2-1-CTG, 02BP-4-CTG] <false>>, <Connectivity-02L1-CTG, -[32L1-4-CTG/ABER], +{}, connected (decided by analogical measurements, myTerminal:mvar:10.6, mw:21.1, kv:NaN, otherTerminal:), connecting path: [02L1-CTG, 32L1-5-CTG, 12L1-CTG, 32L1-4-CTG, 02BP-4-CTG] <true>>]
+30 Jan 23:58:03  INFO - (InconsistencyFixer.java:19) - Inconsistency: <Connectivity-04V1-UTC, -[14V1-CMD/FECH], +{}, connected (decided by analogical measurements, myTerminal:mvar:NaN, mw:NaN, kv:NaN, otherTerminal:mvar:0.4, mw:15.5, kv:236.8), disconnecting path: [04V1-UTC, 34V1-5-CMD, 14V1-CMD, 34V1-4-CMD, 34V1-2-CMD, 04B2-2-CMD] <false>>
+30 Jan 23:58:03  INFO - (InconsistencyFixer.java:19) - Inconsistency: <Connectivity-05L6-CMD, -[15L6-CMD/FECH], +{}, connected (decided by analogical measurements, myTerminal:mvar:1.7, mw:-223.1, kv:444.3, otherTerminal:mvar:NaN, mw:NaN, kv:NaN), disconnecting path: [05L6-CMD, 35L6-8-CMD, 35L6-5-CMD, 15L6-CMD, 35L6-4-CMD, 05B1-CMD] <false>>
+30 Jan 23:58:03  INFO - (InconsistencyFixer.java:19) - Inconsistency: <Connectivity-04V1-CMD, -[34V1-6-CMD/ABER], +{}, connected (decided by analogical measurements, myTerminal:mvar:0.4, mw:15.5, kv:236.8, otherTerminal:mvar:NaN, mw:NaN, kv:NaN), connecting path: [04V1-CMD, 34V1-6-CMD, 34V1-2-CMD, 34B2-2-CMD, 34D1-2-CMD, 14D1-CMD, 34D1-1-CMD, 34B1-1-CMD, 04B1-1-CMD] <true>>
+30 Jan 23:58:03  INFO - (InconsistencyFixer.java:19) - Inconsistency: <Connectivity-05L4-CMD, -[15L4-CMD/FECH], +{}, connected (decided by analogical measurements, myTerminal:mvar:-29.8, mw:-414.9, kv:528.2, otherTerminal:mvar:-57.1, mw:418.8, kv:536.8), disconnecting path: [05L4-CMD, 35L4-8-CMD, 35L4-5-CMD, 15L4-CMD, 35L4-4-CMD, 05B1-CMD] <false>>
+30 Jan 23:58:03  INFO - (InconsistencyFixer.java:19) - Inconsistency: <Connectivity-05L5-CMD, -[15L5-CMD/FECH], +{}, connected (decided by analogical measurements, myTerminal:mvar:-146.5, mw:-413.1, kv:525.8, otherTerminal:mvar:-48.9, mw:425.6, kv:553.7), disconnecting path: [05L5-CMD, 35L5-8-CMD, 35L5-5-CMD, 15L5-CMD, 35L5-4-CMD, 05B1-CMD] <false>>
+30 Jan 23:58:03  INFO - (InconsistencyFixer.java:19) - Inconsistency: <Connectivity-02L1-CTG, -[32L1-4-CTG/ABER], +{}, connected (decided by analogical measurements, myTerminal:mvar:10.6, mw:21.1, kv:NaN, otherTerminal:), connecting path: [02L1-CTG, 32L1-5-CTG, 12L1-CTG, 32L1-4-CTG, 02BP-4-CTG] <true>>
+30 Jan 23:58:03  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 288ms <<---------------
+30 Jan 23:58:06  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:57:57
+30 Jan 23:58:06  INFO - (DynamicWindowController.java:207) - 30/01/13 23:57:57;;END;;SYSTEM;NO_SYNC
+30 Jan 23:58:06  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 16ms <<---------------
+30 Jan 23:58:10  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:58:00
+30 Jan 23:58:10  INFO - (DynamicWindowController.java:207) - 30/01/13 23:58:00;;END;;SYSTEM;NO_SYNC
+30 Jan 23:58:10  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 16ms <<---------------
+30 Jan 23:58:13  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:58:03
+30 Jan 23:58:13  INFO - (DynamicWindowController.java:207) - 30/01/13 23:58:03;;END;;SYSTEM;NO_SYNC
+30 Jan 23:58:13  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 16ms <<---------------
+30 Jan 23:58:16  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:58:07
+30 Jan 23:58:16  INFO - (DynamicWindowController.java:207) - 30/01/13 23:58:07;;END;;SYSTEM;NO_SYNC
+30 Jan 23:58:16  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 43ms <<---------------
+30 Jan 23:58:19  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:58:10
+30 Jan 23:58:19  INFO - (DynamicWindowController.java:207) - 30/01/13 23:58:10;;END;;SYSTEM;NO_SYNC
+30 Jan 23:58:19  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 16ms <<---------------
+30 Jan 23:58:23  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:58:13
+30 Jan 23:58:23  INFO - (DynamicWindowController.java:207) - 30/01/13 23:58:13;;END;;SYSTEM;NO_SYNC
+30 Jan 23:58:23  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 17ms <<---------------
+30 Jan 23:58:26  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:58:17
+30 Jan 23:58:26  INFO - (DynamicWindowController.java:207) - 30/01/13 23:58:17;;END;;SYSTEM;NO_SYNC
+30 Jan 23:58:26  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 16ms <<---------------
+30 Jan 23:58:29  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:58:20
+30 Jan 23:58:29  INFO - (DynamicWindowController.java:207) - 30/01/13 23:58:20;;END;;SYSTEM;NO_SYNC
+30 Jan 23:58:29  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 16ms <<---------------
+30 Jan 23:58:32  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:58:23
+30 Jan 23:58:32  INFO - (DynamicWindowController.java:207) - 30/01/13 23:58:23;;END;;SYSTEM;NO_SYNC
+30 Jan 23:58:32  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 16ms <<---------------
+30 Jan 23:58:35  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:58:26
+30 Jan 23:58:35  INFO - (DynamicWindowController.java:207) - 30/01/13 23:58:26;;END;;SYSTEM;NO_SYNC
+30 Jan 23:58:35  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 33ms <<---------------
+30 Jan 23:58:38  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:58:29
+30 Jan 23:58:38  INFO - (DynamicWindowController.java:207) - 30/01/13 23:58:29;;END;;SYSTEM;NO_SYNC
+30 Jan 23:58:38  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 16ms <<---------------
+30 Jan 23:58:41  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:58:32
+30 Jan 23:58:41  INFO - (DynamicWindowController.java:207) - 30/01/13 23:58:32;;END;;SYSTEM;NO_SYNC
+30 Jan 23:58:41  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 16ms <<---------------
+30 Jan 23:58:42  WARN - (TopologyService.java:52) - Topology is not updated! Last modification: 1351394292000. Should be greated than: 1359511122550
+30 Jan 23:58:44  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:58:35
+30 Jan 23:58:44  INFO - (DynamicWindowController.java:207) - 30/01/13 23:58:35;;END;;SYSTEM;NO_SYNC
+30 Jan 23:58:44  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 17ms <<---------------
+30 Jan 23:58:48  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:58:38
+30 Jan 23:58:48  INFO - (DynamicWindowController.java:207) - 30/01/13 23:58:38;;END;;SYSTEM;NO_SYNC
+30 Jan 23:58:48  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 16ms <<---------------
+30 Jan 23:58:51  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:58:41
+30 Jan 23:58:51  INFO - (DynamicWindowController.java:207) - 30/01/13 23:58:41;;END;;SYSTEM;NO_SYNC
+30 Jan 23:58:51  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 27ms <<---------------
+30 Jan 23:58:54  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:58:45
+30 Jan 23:58:54  INFO - (DynamicWindowController.java:207) - 30/01/13 23:58:45;;END;;SYSTEM;NO_SYNC
+30 Jan 23:58:54  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 16ms <<---------------
+30 Jan 23:58:57  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:58:48
+30 Jan 23:58:57  INFO - (DynamicWindowController.java:207) - 30/01/13 23:58:48;;END;;SYSTEM;NO_SYNC
+30 Jan 23:58:57  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 16ms <<---------------
+30 Jan 23:59:00  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:58:51
+30 Jan 23:59:00  INFO - (DynamicWindowController.java:207) - 30/01/13 23:58:51;;END;;SYSTEM;NO_SYNC
+30 Jan 23:59:00  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 16ms <<---------------
+30 Jan 23:59:03  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:58:54
+30 Jan 23:59:03  INFO - (DynamicWindowController.java:207) - 30/01/13 23:58:54;;END;;SYSTEM;NO_SYNC
+30 Jan 23:59:03  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 15ms <<---------------
+30 Jan 23:59:06  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:57:57
+30 Jan 23:59:06  INFO - (DynamicWindowController.java:207) - 30/01/13 23:57:57;14V1-CMD;FECH;;PDS;ROUTINE_SYNC
+30 Jan 23:59:06  INFO - (DynamicWindowController.java:207) - 30/01/13 23:57:57;15L4-CMD;FECH;;PDS;ROUTINE_SYNC
+30 Jan 23:59:06  INFO - (DynamicWindowController.java:207) - 30/01/13 23:57:57;15L5-CMD;FECH;;PDS;ROUTINE_SYNC
+30 Jan 23:59:06  INFO - (DynamicWindowController.java:207) - 30/01/13 23:57:57;15L6-CMD;FECH;;PDS;ROUTINE_SYNC
+30 Jan 23:59:06  INFO - (DynamicWindowController.java:207) - 30/01/13 23:57:57;34V1-6-CMD;ABER;;PDS;ROUTINE_SYNC
+30 Jan 23:59:06  INFO - (DynamicWindowController.java:207) - 30/01/13 23:57:57;32L1-4-CTG;ABER;;PDS;ROUTINE_SYNC
+30 Jan 23:59:06  INFO - (DynamicWindowController.java:207) - 30/01/13 23:57:57;34J3-4-USD;FECH;;PDS;ROUTINE_SYNC
+30 Jan 23:59:06  INFO - (DynamicWindowController.java:207) - 30/01/13 23:58:57;;END;;SYSTEM;ROUTINE_SYNC
+30 Jan 23:59:06  INFO - (LineDetector.java:380) - [<Connectivity-04V1-CMD, -[34V1-6-CMD/ABER], +{}, connected (decided by analogical measurements, myTerminal:mvar:0.5, mw:15.5, kv:236.7, otherTerminal:mvar:NaN, mw:NaN, kv:NaN), connecting path: [04V1-CMD, 34V1-6-CMD, 34V1-2-CMD, 34B2-2-CMD, 34D1-2-CMD, 14D1-CMD, 34D1-1-CMD, 34B1-1-CMD, 04B1-1-CMD] <true>>, <Connectivity-04V1-CMD, -[34V1-6-CMD/ABER], +{}, connected (decided by analogical measurements, myTerminal:mvar:0.5, mw:15.5, kv:236.7, otherTerminal:mvar:NaN, mw:NaN, kv:NaN), connecting path: [04V1-CMD, 34V1-6-CMD, 34V1-2-CMD, 34B2-2-CMD, 34D1-2-CMD, 14D1-CMD, 34D1-1-CMD, 34B1-1-CMD, 04B1-1-CMD] <true>>]
+30 Jan 23:59:06  INFO - (LineDetector.java:380) - [<Connectivity-02L1-CTG, -[], +{12D1-CTG=30/01/13 23:57:57 - FECH, 32BA-1-CTG=30/01/13 23:57:57 - FECH, 32L1-6-CTG=30/01/13 23:57:57 - FECH}, connected (decided by analogical measurements, myTerminal:mvar:10.4, mw:20.9, kv:NaN, otherTerminal:), connecting path: [02L1-CTG, 32L1-6-CTG, 32BA-1-CTG, 32D1-2-CTG, 12D1-CTG, 32D1-1-CTG, 02BP-2-CTG] <false>>, <Connectivity-02L1-CTG, -[], +{12D2-CTG=30/01/13 23:57:57 - FECH, 32L1-6-CTG=30/01/13 23:57:57 - FECH}, connected (decided by analogical measurements, myTerminal:mvar:10.4, mw:20.9, kv:NaN, otherTerminal:), connecting path: [02L1-CTG, 32L1-6-CTG, 32D2-2-CTG, 12D2-CTG, 32D2-1-CTG, 02BP-4-CTG] <false>>, <Connectivity-02L1-CTG, -[32L1-4-CTG/ABER], +{}, connected (decided by analogical measurements, myTerminal:mvar:10.4, mw:20.9, kv:NaN, otherTerminal:), connecting path: [02L1-CTG, 32L1-5-CTG, 12L1-CTG, 32L1-4-CTG, 02BP-4-CTG] <true>>]
+30 Jan 23:59:06  INFO - (InconsistencyFixer.java:19) - Inconsistency: <Connectivity-04V1-UTC, -[14V1-CMD/FECH], +{}, connected (decided by analogical measurements, myTerminal:mvar:NaN, mw:NaN, kv:NaN, otherTerminal:mvar:0.5, mw:15.5, kv:236.7), disconnecting path: [04V1-UTC, 34V1-5-CMD, 14V1-CMD, 34V1-4-CMD, 34V1-2-CMD, 04B2-2-CMD] <false>>
+30 Jan 23:59:06  INFO - (InconsistencyFixer.java:19) - Inconsistency: <Connectivity-05L6-CMD, -[15L6-CMD/FECH], +{}, connected (decided by analogical measurements, myTerminal:mvar:1.7, mw:-223.1, kv:444.3, otherTerminal:mvar:NaN, mw:NaN, kv:NaN), disconnecting path: [05L6-CMD, 35L6-8-CMD, 35L6-5-CMD, 15L6-CMD, 35L6-4-CMD, 05B1-CMD] <false>>
+30 Jan 23:59:06  INFO - (InconsistencyFixer.java:19) - Inconsistency: <Connectivity-04V1-CMD, -[34V1-6-CMD/ABER], +{}, connected (decided by analogical measurements, myTerminal:mvar:0.5, mw:15.5, kv:236.7, otherTerminal:mvar:NaN, mw:NaN, kv:NaN), connecting path: [04V1-CMD, 34V1-6-CMD, 34V1-2-CMD, 34B2-2-CMD, 34D1-2-CMD, 14D1-CMD, 34D1-1-CMD, 34B1-1-CMD, 04B1-1-CMD] <true>>
+30 Jan 23:59:06  INFO - (InconsistencyFixer.java:19) - Inconsistency: <Connectivity-05L4-CMD, -[15L4-CMD/FECH], +{}, connected (decided by analogical measurements, myTerminal:mvar:-28.9, mw:-409.8, kv:527.9, otherTerminal:mvar:-58.5, mw:413.8, kv:536.5), disconnecting path: [05L4-CMD, 35L4-8-CMD, 35L4-5-CMD, 15L4-CMD, 35L4-4-CMD, 05B1-CMD] <false>>
+30 Jan 23:59:06  INFO - (InconsistencyFixer.java:19) - Inconsistency: <Connectivity-05L5-CMD, -[15L5-CMD/FECH], +{}, connected (decided by analogical measurements, myTerminal:mvar:-144.7, mw:-408.7, kv:525.7, otherTerminal:mvar:-50.2, mw:421.1, kv:553.4), disconnecting path: [05L5-CMD, 35L5-8-CMD, 35L5-5-CMD, 15L5-CMD, 35L5-4-CMD, 05B1-CMD] <false>>
+30 Jan 23:59:06  INFO - (InconsistencyFixer.java:19) - Inconsistency: <Connectivity-02L1-CTG, -[32L1-4-CTG/ABER], +{}, connected (decided by analogical measurements, myTerminal:mvar:10.4, mw:20.9, kv:NaN, otherTerminal:), connecting path: [02L1-CTG, 32L1-5-CTG, 12L1-CTG, 32L1-4-CTG, 02BP-4-CTG] <true>>
+30 Jan 23:59:07  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 293ms <<---------------
+30 Jan 23:59:10  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:59:00
+30 Jan 23:59:10  INFO - (DynamicWindowController.java:207) - 30/01/13 23:59:00;;END;;SYSTEM;NO_SYNC
+30 Jan 23:59:10  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 16ms <<---------------
+30 Jan 23:59:13  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:59:04
+30 Jan 23:59:13  INFO - (DynamicWindowController.java:207) - 30/01/13 23:59:04;;END;;SYSTEM;NO_SYNC
+30 Jan 23:59:13  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 15ms <<---------------
+30 Jan 23:59:16  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:59:07
+30 Jan 23:59:16  INFO - (DynamicWindowController.java:207) - 30/01/13 23:59:07;;END;;SYSTEM;NO_SYNC
+30 Jan 23:59:16  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 16ms <<---------------
+30 Jan 23:59:19  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:59:10
+30 Jan 23:59:19  INFO - (DynamicWindowController.java:207) - 30/01/13 23:59:10;;END;;SYSTEM;NO_SYNC
+30 Jan 23:59:19  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 16ms <<---------------
+30 Jan 23:59:22  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:59:13
+30 Jan 23:59:22  INFO - (DynamicWindowController.java:207) - 30/01/13 23:59:13;;END;;SYSTEM;NO_SYNC
+30 Jan 23:59:22  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 15ms <<---------------
+30 Jan 23:59:25  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:59:16
+30 Jan 23:59:25  INFO - (DynamicWindowController.java:207) - 30/01/13 23:59:16;;END;;SYSTEM;NO_SYNC
+30 Jan 23:59:25  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 16ms <<---------------
+30 Jan 23:59:28  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:59:19
+30 Jan 23:59:28  INFO - (DynamicWindowController.java:207) - 30/01/13 23:59:19;;END;;SYSTEM;NO_SYNC
+30 Jan 23:59:28  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 16ms <<---------------
+30 Jan 23:59:31  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:59:22
+30 Jan 23:59:31  INFO - (DynamicWindowController.java:207) - 30/01/13 23:59:22;;END;;SYSTEM;NO_SYNC
+30 Jan 23:59:31  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 16ms <<---------------
+30 Jan 23:59:35  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:59:25
+30 Jan 23:59:35  INFO - (DynamicWindowController.java:207) - 30/01/13 23:59:25;;END;;SYSTEM;NO_SYNC
+30 Jan 23:59:35  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 16ms <<---------------
+30 Jan 23:59:38  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:59:28
+30 Jan 23:59:38  INFO - (DynamicWindowController.java:207) - 30/01/13 23:59:28;;END;;SYSTEM;NO_SYNC
+30 Jan 23:59:38  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 16ms <<---------------
+30 Jan 23:59:41  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:59:32
+30 Jan 23:59:41  INFO - (DynamicWindowController.java:207) - 30/01/13 23:59:32;;END;;SYSTEM;NO_SYNC
+30 Jan 23:59:41  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 16ms <<---------------
+30 Jan 23:59:42  WARN - (TopologyService.java:52) - Topology is not updated! Last modification: 1351394292000. Should be greated than: 1359511182588
+30 Jan 23:59:44  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:59:35
+30 Jan 23:59:44  INFO - (DynamicWindowController.java:207) - 30/01/13 23:59:35;;END;;SYSTEM;NO_SYNC
+30 Jan 23:59:44  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 15ms <<---------------
+30 Jan 23:59:48  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:59:39
+30 Jan 23:59:48  INFO - (DynamicWindowController.java:207) - 30/01/13 23:59:39;;END;;SYSTEM;NO_SYNC
+30 Jan 23:59:48  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 17ms <<---------------
+30 Jan 23:59:51  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:59:42
+30 Jan 23:59:51  INFO - (DynamicWindowController.java:207) - 30/01/13 23:59:42;;END;;SYSTEM;NO_SYNC
+30 Jan 23:59:51  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 16ms <<---------------
+30 Jan 23:59:54  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:59:45
+30 Jan 23:59:54  INFO - (DynamicWindowController.java:207) - 30/01/13 23:59:45;;END;;SYSTEM;NO_SYNC
+30 Jan 23:59:54  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 16ms <<---------------
+30 Jan 23:59:57  INFO - (DynamicWindowController.java:184) - Inserindo coleta PAS de tempo: 30/01/13 23:59:48
+30 Jan 23:59:57  INFO - (DynamicWindowController.java:207) - 30/01/13 23:59:48;;END;;SYSTEM;NO_SYNC
+30 Jan 23:59:57  INFO - (DynamicWindowController.java:108) - --------------->> Finished! 51ms <<---------------

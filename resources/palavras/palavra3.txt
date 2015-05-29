@@ -1,0 +1,1 @@
+connected (decided by analogical measurements, myTerminal:mvar:0.3, mw:15.6, kv:237.1, otherTerminal:mvar:NaN, mw:NaN, kv:NaN), connecting path: [04V1-CMD, 34V1-6-CMD, 34V1-2-CMD, 34B2-2-CMD, 34D1-2-CMD, 14D1-CMD, 34D1-1-CMD, 34B1-1-CMD, 04B1-1-CMD]

@@ -1,10 +1,8 @@
 package br.com.edu.metodologia.main.manager;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.util.Scanner;
 
 import br.com.edu.metodologia.main.search.KMP;
 import br.com.edu.metodologia.main.search.Searchable;
@@ -39,20 +37,21 @@ public class Manager {
 		File arquivoBusca = new File(args[2]);
 
 		validarParametros(algoritmo, arquivoConteudo, arquivoBusca);
-		
+
 		String conteudo = getStringFromFile(arquivoConteudo);
 		String busca = getStringFromFile(arquivoBusca);
-		
+
 		doExperiment(algoritmo, conteudo, busca);
 	}
 
 	private static void doExperiment(String algoritmo, String conteudo,
 			String busca) {
-		
 		if (ESearch.KMP.getName().equals(algoritmo)) {
 			Searchable search = new KMP(busca);
-			System.out.println("OPA");
 			System.out.println(search.search(conteudo));
+		} else {
+			System.err
+					.println("O algoritmo expecificado não existe neste experimento.");
 		}
 	}
 
@@ -83,7 +82,7 @@ public class Manager {
 	private static void validarParametros(String algoritmo, File conteudo,
 			File busca) {
 		boolean arquivosValidos = conteudo.exists() && busca.exists();
-		
+
 		if (!arquivosValidos) {
 			System.err.println("Verique o path dos seus arquivos");
 			System.exit(ERROR);

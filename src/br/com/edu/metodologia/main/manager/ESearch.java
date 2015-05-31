@@ -2,7 +2,7 @@ package br.com.edu.metodologia.main.manager;
 
 public enum ESearch {
 	
-	KPM("Kpm");
+	KMP("Kmp");
 
 	private String name;
 	

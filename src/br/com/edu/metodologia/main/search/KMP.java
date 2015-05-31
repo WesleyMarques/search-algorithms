@@ -1,9 +1,5 @@
 package br.com.edu.metodologia.main.search;
 
-/**
- * http://algs4.cs.princeton.edu/53substring/KMP.java.html
- * 
- */
 public class KMP extends Searchable {
 	private final int R; // the radix
 	private int[][] dfa; // the KMP automoton
@@ -65,7 +61,6 @@ public class KMP extends Searchable {
 
 	// return offset of first match; N if no match
 	public int search(char[] text) {
-
 		// simulate operation of DFA on text
 		int M = pattern.length;
 		int N = text.length;
@@ -76,32 +71,5 @@ public class KMP extends Searchable {
 		if (j == M)
 			return i - M; // found
 		return N; // not found
-	}
-
-	// test client
-	public static void main(String[] args) {
-		String pat = "casa";
-		String txt = "CONTEND  casa O ARQUIVO casa";
-		char[] pattern = pat.toCharArray();
-		char[] text = txt.toCharArray();
-
-		KMP kmp1 = new KMP(pat);
-		int offset1 = kmp1.search(txt);
-
-		KMP kmp2 = new KMP(pattern, 256);
-		int offset2 = kmp2.search(text);
-
-		// print results
-		System.out.println("text:    " + txt);
-
-		System.out.print("pattern: ");
-		for (int i = 0; i < offset1; i++)
-			System.out.print(" ");
-		System.out.println(pat);
-
-		System.out.print("pattern: ");
-		for (int i = 0; i < offset2; i++)
-			System.out.print(" ");
-		System.out.println(pat);
 	}
 }

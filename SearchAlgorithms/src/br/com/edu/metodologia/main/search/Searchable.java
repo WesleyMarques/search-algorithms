@@ -15,4 +15,5 @@ public abstract class Searchable {
 	 * @return
 	 */
 	public abstract int search(String text);
+	public abstract int search(char[] text);
 }

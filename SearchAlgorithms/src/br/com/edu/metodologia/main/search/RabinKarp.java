@@ -83,4 +83,10 @@ public class RabinKarp extends Searchable {
 		return N;
 	}
 
+	@Override
+	public int search(char[] text) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

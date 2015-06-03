@@ -4,7 +4,10 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 
+import br.com.edu.metodologia.main.search.BoyerMoore;
+import br.com.edu.metodologia.main.search.BruteForce;
 import br.com.edu.metodologia.main.search.KMP;
+import br.com.edu.metodologia.main.search.RabinKarp;
 import br.com.edu.metodologia.main.search.Searchable;
 
 /**
@@ -49,7 +52,13 @@ public class Manager {
 		if (ESearch.KMP.getName().equals(algoritmo)) {
 			Searchable search = new KMP(busca);
 			System.out.println(search.search(conteudo));
-		} else {
+		}else if(ESearch.BRUTE_FORCE.getName().equals(algoritmo)){
+			Searchable search = new BruteForce(busca);
+			System.out.println(search.search(conteudo));
+		}else if(ESearch.RABIN_KARP.getName().equals(algoritmo)){
+			Searchable search = new RabinKarp(busca);
+			System.out.println(search.search(conteudo));
+		}else {
 			System.err
 					.println("O algoritmo expecificado não existe neste experimento.");
 		}

@@ -2,19 +2,15 @@ package br.com.edu.metodologia.test;
 
 import static org.junit.Assert.assertEquals;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Scanner;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import br.com.edu.metodologia.main.search.BoyerMoore;
 import br.com.edu.metodologia.main.search.BruteForce;
-import br.com.edu.metodologia.main.search.RabinKarp;
 import br.com.edu.metodologia.main.search.Searchable;
 
 public class BruteForceTest {

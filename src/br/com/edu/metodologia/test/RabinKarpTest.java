@@ -12,7 +12,6 @@ import java.util.Scanner;
 import org.junit.Before;
 import org.junit.Test;
 
-import br.com.edu.metodologia.main.search.BoyerMoore;
 import br.com.edu.metodologia.main.search.RabinKarp;
 import br.com.edu.metodologia.main.search.Searchable;
 

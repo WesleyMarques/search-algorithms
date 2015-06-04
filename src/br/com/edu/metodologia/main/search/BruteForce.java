@@ -18,10 +18,4 @@ public class BruteForce extends Searchable {
         if (j == M) return i - M;    // found
         else        return N;        // not found
 	}
-
-	@Override
-	public int search(char[] text) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 }

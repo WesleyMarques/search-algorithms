@@ -7,13 +7,13 @@ package br.com.edu.metodologia.main.search;
 public abstract class Searchable {
 
 	protected String pattern;
-	
+
 	/**
-	 * 
+	 * Método para realizar busca de um determinado valor.
 	 * 
 	 * @param text
-	 * @return
+	 *            texto buscado
+	 * @return índice do ínicio do conteúdo buscado.
 	 */
 	public abstract int search(String text);
-	public abstract int search(char[] text);
 }

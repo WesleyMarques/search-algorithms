@@ -19,7 +19,7 @@ public class Manager {
 
 	private static final int QUANTIDADE_OBRIGATORIA = 3;
 	private static final int ERROR = 1;
-	private static String algoritmo,conteudo,busca;
+	private static String algoritmo, conteudo, busca;
 	private static int contem;
 	protected static String pidStr;
 
@@ -37,14 +37,12 @@ public class Manager {
 		}
 	}
 
-	
-
 	/**
 	 * Método para executar o experimento.
 	 * 
 	 * @param args
 	 *            conjunto de parâmetros para executar o experimento.
-	 * @throws InterruptedException 
+	 * @throws InterruptedException
 	 */
 	private static void run(String[] args) throws InterruptedException {
 		algoritmo = args[0];
@@ -58,7 +56,7 @@ public class Manager {
 
 		Long inicio = System.currentTimeMillis();
 
-		Thread t1 = new Thread() {
+		Thread dadosConsumo = new Thread() {
 			@Override
 			public void run() {
 				try {
@@ -73,41 +71,42 @@ public class Manager {
 
 					String line = "";
 					while ((line = buff.readLine()) != null) {
-						System.out.println(line);
 						int cont = 0, resu = 0;
 						String[] test = line.split(" ");
-						for (int i = 0;i<test.length;i++) {
-							if(i == test.length-3) Manager.this.pidStr = test[i];												
+						for (int i = 0; i < test.length; i++) {
+							if (i == test.length - 3)
+								Manager.this.pidStr = test[i];
 						}
 						result.append(line);
 					}
-					
+
 				} catch (IOException | InterruptedException e) {
 					e.printStackTrace();
 				}
 			}
 		};
-		Thread t2 = new Thread(){
+		Thread experimento = new Thread() {
 			@Override
 			public void run() {
-				Manager.this.contem = doExperiment(Manager.this.algoritmo, Manager.this.conteudo, Manager.this.busca);
-			}			
+				Manager.this.contem = doExperiment(Manager.this.algoritmo,
+						Manager.this.conteudo, Manager.this.busca);
+			}
 		};
-		t2.run();
-		t1.run();
-		t1.join();
-		t2.join();
+		experimento.run();
+		dadosConsumo.run();
+		dadosConsumo.join();
+		experimento.join();
 		Long fim = System.currentTimeMillis();
 		Long tempo = fim - inicio;
 
-		result(arquivoConteudo.getPath(), arquivoBusca.getPath(), contem, tempo);
+		result(arquivoConteudo.getPath(), arquivoBusca.getPath(), contem != conteudo.length(), tempo);
 	}
 
-	private static void result(String conteudo, String busca, int contem,
+	private static void result(String conteudo, String busca, boolean contem,
 			Long tempo) {
 		String result = String
 				.format("texto_buscado:%s texto_busca:%s resultado: %s tempo_execucao: %f consumo_memo:%s num_operacaoes: %d",
-						conteudo, busca, contem, tempo * 0.001, pidStr, 0);
+						conteudo, busca, (contem ? "S" : "N"), tempo * 0.001, pidStr, 0);
 		System.out.println(result);
 	}
 

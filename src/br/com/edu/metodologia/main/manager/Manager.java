@@ -1,7 +1,9 @@
 package br.com.edu.metodologia.main.manager;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.nio.file.Files;
 
 import br.com.edu.metodologia.main.search.BruteForce;
@@ -44,25 +46,61 @@ public class Manager {
 		String busca = getStringFromFile(arquivoBusca);
 
 		Long inicio = System.currentTimeMillis();
-		doExperiment(algoritmo, conteudo, busca);
+
+		Thread t1 = new Thread() {
+			@Override
+			public void run() {
+				try {
+					Process processo = Runtime.getRuntime().exec(
+							"pidstat -C java");
+					processo.waitFor();
+
+					StringBuilder result = new StringBuilder();
+
+					BufferedReader buff = new BufferedReader(
+							new InputStreamReader(processo.getInputStream()));
+
+					String line = "";
+					while ((line = buff.readLine()) != null) {
+						result.append(line);
+					}
+					System.out.println(result.toString());
+				} catch (IOException | InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		};
+		t1.run();
+		int contem = doExperiment(algoritmo, conteudo, busca);
 		Long fim = System.currentTimeMillis();
-		System.out.println("Tempo de execucao " + (fim - inicio));
+		Long tempo = fim - inicio;
+
+		result(arquivoConteudo.getPath(), arquivoBusca.getPath(), contem, tempo);
 	}
 
-	private static void doExperiment(String algoritmo, String conteudo,
+	private static void result(String conteudo, String busca, int contem,
+			Long tempo) {
+		String result = String
+				.format("texto_buscado:%s texto_busca:%s resultado: %s tempo_execucao: %f consumo_memo:%d num_operacaoes: %d",
+						conteudo, busca, contem, tempo * 0.001, 0, 0);
+		System.out.println(result);
+	}
+
+	private static int doExperiment(String algoritmo, String conteudo,
 			String busca) {
 		if (ESearch.KMP.getName().equals(algoritmo)) {
 			Searchable search = new KMP(busca);
-			System.out.println(search.search(conteudo));
+			return search.search(conteudo);
 		} else if (ESearch.BRUTE_FORCE.getName().equals(algoritmo)) {
 			Searchable search = new BruteForce(busca);
-			System.out.println(search.search(conteudo));
+			return search.search(conteudo);
 		} else if (ESearch.RABIN_KARP.getName().equals(algoritmo)) {
 			Searchable search = new RabinKarp(busca);
-			System.out.println(search.search(conteudo));
+			return search.search(conteudo);
 		} else {
 			System.err
 					.println("O algoritmo expecificado não existe neste experimento.");
+			return -1;
 		}
 	}
 

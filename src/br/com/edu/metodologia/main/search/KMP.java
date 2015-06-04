@@ -45,18 +45,19 @@ public class KMP extends Searchable {
 
 	// return offset of first match; N if no match
 	@Override
-	public int search(String txt) {
-
+	public int[] search(String txt) {
+		int passos = 0;
 		// simulate operation of DFA on text
 		int M = pat.length();
 		int N = txt.length();
 		int i, j;
 		for (i = 0, j = 0; i < N && j < M; i++) {
+			passos++;
 			j = dfa[txt.charAt(i)][j];
 		}
 		if (j == M)
-			return i - M; // found
-		return N; // not found
+			return new int[]{i - M, ++passos}; // found
+		return new int[]{N, ++passos}; // not found
 	}
 
 	// return offset of first match; N if no match

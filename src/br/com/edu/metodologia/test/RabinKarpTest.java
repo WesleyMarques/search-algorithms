@@ -32,14 +32,14 @@ public class RabinKarpTest {
 	@Test
 	public void test() {
 		String txt = "sssteste     ndo";
-		assertEquals(3, RabinKarp.search(txt));
+		assertEquals(3, RabinKarp.search(txt)[0]);
 	}
 
 	@Test
 	public void testArquivoSimples() throws IOException {
 		String txt = new String(Files.readAllBytes(Paths.get("resources/palavras/palavra1.txt")),
 				StandardCharsets.UTF_8);
-		assertEquals(txt.length(), RabinKarp.search(txt));
+		assertEquals(txt.length(), RabinKarp.search(txt)[0]);
 	}
 
 }

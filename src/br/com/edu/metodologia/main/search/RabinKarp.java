@@ -57,18 +57,22 @@ public class RabinKarp extends Searchable {
 	}
 
 	@Override
-	public int search(String text) {
+	public int[] search(String text) {
+		int passos = 0;
 		int N = text.length();
 		if (N < M)
-			return N;
+			return new int[]{N, ++passos};
 		long txtHash = hash(text, M);
 
 		// check for match at offset 0
-		if ((patHash == txtHash) && check(text, 0))
-			return 0;
+		if ((patHash == txtHash) && check(text, 0)) {
+			passos++;
+			return new int[]{0, passos};
+		}
 
 		// check for hash match; if hash match, check for exact match
 		for (int i = M; i < N; i++) {
+			passos++;
 			// Remove leading digit, add trailing digit, check for match.
 			txtHash = (txtHash + Q - RM * text.charAt(i - M) % Q) % Q;
 			txtHash = (txtHash * R + text.charAt(i)) % Q;
@@ -76,10 +80,10 @@ public class RabinKarp extends Searchable {
 			// match
 			int offset = i - M + 1;
 			if ((patHash == txtHash) && check(text, offset))
-				return offset;
+				return new int[]{offset, ++passos};
 		}
 
 		// no match
-		return N;
+		return new int[]{N, passos};
 	}
 }

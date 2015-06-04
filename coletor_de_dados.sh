@@ -6,4 +6,4 @@ FILE_BUSCA=$3 # path do arquivo que contem o que se busca
 # diretorio com executaveis do experimento
 cd bin/
 # executando experimento
-java br.com.edu.metodologia.main.manager.Manager $ALGORITMO $FILE_BUSCADO $FILE_BUSCA
+java -Xms2048m -Xmx3072m br.com.edu.metodologia.main.manager.Manager $ALGORITMO $FILE_BUSCADO $FILE_BUSCA

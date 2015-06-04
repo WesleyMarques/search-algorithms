@@ -15,5 +15,5 @@ public abstract class Searchable {
 	 *            texto buscado
 	 * @return índice do ínicio do conteúdo buscado.
 	 */
-	public abstract int search(String text);
+	public abstract int[] search(String text);
 }

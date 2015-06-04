@@ -25,7 +25,7 @@ public class BruteForceTest {
 	@Test
 	public void test() {
 		String txt = "sssteste     ndo";
-		assertEquals(3, search.search(txt));
+		assertEquals(3, search.search(txt)[0]);
 	}
 
 	@Test
@@ -33,7 +33,7 @@ public class BruteForceTest {
 		String txt = new String(Files.readAllBytes(Paths
 				.get("resources/palavras/palavra1.txt")),
 				StandardCharsets.UTF_8);
-		assertEquals(txt.length(), search.search(txt));
+		assertEquals(txt.length(), search.search(txt)[0]);
 	}
 
 }

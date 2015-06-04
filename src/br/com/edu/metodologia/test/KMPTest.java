@@ -1,8 +1,11 @@
 package br.com.edu.metodologia.test;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
+import static org.junit.Assert.assertTrue;
+
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -12,30 +15,25 @@ import br.com.edu.metodologia.main.search.Searchable;
 
 public class KMPTest {
 
-	private Scanner scanner;
 	private Searchable search;
-	private File file;
 	
 	@Before
 	public void setup() {
-		search = new KMP("teste");
+		search = new KMP("decided by analogical measurements");
 	}
 	
 	@Test
-	public void testPalavraExistente() {
-		String texto = "conteudo de texto";
-		System.out.println(search.search(texto));
-		System.out.println(texto.length());
-		System.out.println(search.search("teste"));
+	public void testArquivoSimples() throws IOException {
+		String txt = new String(Files.readAllBytes(Paths.get("resources/textos/texto2.txt")),
+				StandardCharsets.UTF_8);
+		assertTrue(search.search(txt)[0]!=-1);
 	}
-	
 	@Test
-	public void testArquivoSimples() throws FileNotFoundException {
-		file = new File("resources/palavras/palavra1.txt");
-		scanner = new Scanner(file);
-		
-		System.out.println(scanner.nextLine());
-		System.out.println(file.toString());
+	public void testArquivoSimplesNotFound() throws IOException {
+		search = new KMP("TestandoNotFound");
+		String txt = new String(Files.readAllBytes(Paths.get("resources/textos/texto2.txt")),
+				StandardCharsets.UTF_8);
+		assertTrue(search.search(txt)[0]==txt.length());
 	}
 	
 }

@@ -19,31 +19,42 @@ public class Manager {
 
 	private static final int QUANTIDADE_OBRIGATORIA = 3;
 	private static final int ERROR = 1;
+	private static String algoritmo,conteudo,busca;
+	private static int contem;
+	protected static String pidStr;
 
 	public static void main(String[] args) {
 		if (args.length != QUANTIDADE_OBRIGATORIA) {
 			System.err
 					.println("É necessário que sejam passados os três parâmetros específicos.");
 		} else {
-			run(args);
+			try {
+				run(args);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
+
+	
 
 	/**
 	 * Método para executar o experimento.
 	 * 
 	 * @param args
 	 *            conjunto de parâmetros para executar o experimento.
+	 * @throws InterruptedException 
 	 */
-	private static void run(String[] args) {
-		String algoritmo = args[0];
+	private static void run(String[] args) throws InterruptedException {
+		algoritmo = args[0];
 		File arquivoConteudo = new File(args[1]);
 		File arquivoBusca = new File(args[2]);
 
 		validarParametros(algoritmo, arquivoConteudo, arquivoBusca);
 
-		String conteudo = getStringFromFile(arquivoConteudo);
-		String busca = getStringFromFile(arquivoBusca);
+		conteudo = getStringFromFile(arquivoConteudo);
+		busca = getStringFromFile(arquivoBusca);
 
 		Long inicio = System.currentTimeMillis();
 
@@ -52,7 +63,7 @@ public class Manager {
 			public void run() {
 				try {
 					Process processo = Runtime.getRuntime().exec(
-							"pidstat -C java");
+							"pidstat -C java -r");
 					processo.waitFor();
 
 					StringBuilder result = new StringBuilder();
@@ -62,16 +73,30 @@ public class Manager {
 
 					String line = "";
 					while ((line = buff.readLine()) != null) {
+						System.out.println(line);
+						int cont = 0, resu = 0;
+						String[] test = line.split(" ");
+						for (int i = 0;i<test.length;i++) {
+							if(i == test.length-3) Manager.this.pidStr = test[i];												
+						}
 						result.append(line);
 					}
-					System.out.println(result.toString());
+					
 				} catch (IOException | InterruptedException e) {
 					e.printStackTrace();
 				}
 			}
 		};
+		Thread t2 = new Thread(){
+			@Override
+			public void run() {
+				Manager.this.contem = doExperiment(Manager.this.algoritmo, Manager.this.conteudo, Manager.this.busca);
+			}			
+		};
+		t2.run();
 		t1.run();
-		int contem = doExperiment(algoritmo, conteudo, busca);
+		t1.join();
+		t2.join();
 		Long fim = System.currentTimeMillis();
 		Long tempo = fim - inicio;
 
@@ -81,8 +106,8 @@ public class Manager {
 	private static void result(String conteudo, String busca, int contem,
 			Long tempo) {
 		String result = String
-				.format("texto_buscado:%s texto_busca:%s resultado: %s tempo_execucao: %f consumo_memo:%d num_operacaoes: %d",
-						conteudo, busca, contem, tempo * 0.001, 0, 0);
+				.format("texto_buscado:%s texto_busca:%s resultado: %s tempo_execucao: %f consumo_memo:%s num_operacaoes: %d",
+						conteudo, busca, contem, tempo * 0.001, pidStr, 0);
 		System.out.println(result);
 	}
 
